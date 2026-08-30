@@ -1,0 +1,115 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #f4effc;
+    --second-color: #67568c;
+    --color-shadow: #1f1235;
+    --padding-size: 30px;
+    --padding-size-sec: 10px;
+    --button-color: #67568c;
+}
+
+body {
+    margin: 0;
+    padding: 30px 0;
+    min-height: 100vh;
+    overflow-x: hidden;
+
+    background: linear-gradient(135deg, var(--primary-color), var(--second-color));
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.container {
+    padding: var(--padding-size);
+    width: 40%;
+    min-width: 450px;
+}
+
+
+.volt {
+    width: 100%;
+    padding: var(--padding-size);
+    background-color: var(--button-color);
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 5px 2ch var(--color-shadow);
+}
+
+.volt input {
+
+    outline: none;
+    border-radius: 5px;
+    width: 70%;
+    border: 2px solid var(--second-color);
+    padding: var(--padding-size-sec);
+    font-weight: 500;
+    background-color: var(--primary-color);
+    font-family: "Playfair Display", serif;
+}
+
+.volt input:focus {
+border-color: var(--color-shadow);
+
+}
+
+.tsks .task button,
+.volt button {
+
+    font-weight: 500;
+    width: 20%;
+    outline: none;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+    color: var(--button-color);
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.tsks .task button:hover,
+.volt button:hover {
+    background-color: var(--second-color);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.task button {
+    height: 100%;
+}
+
+.tsks {
+    width: 100%;
+    margin-top: var(--padding-size);
+    padding: var(--padding-size);
+    background-color: var(--button-color);
+    border-radius: 5px;
+    box-shadow: 0 5px 20px var(--color-shadow);
+
+
+}
+
+.tsks .task {
+    display: flex;
+    justify-content: space-between;
+    margin-top: var(--padding-size-sec);
+    width: 100%;
+    height: 50px;
+    background-color: var(--button-color);
+    align-items: center;
+    padding: var(--padding-size-sec);
+    border-bottom: 1px solid var(--primary-color);
+    cursor: pointer;
+    color: var(--primary-color);
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.completed {
+    text-decoration: line-through;
+}
